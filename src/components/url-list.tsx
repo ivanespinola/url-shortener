@@ -14,7 +14,7 @@ export default function UrlList() {
   const [copyUrl, setCopyUrl] = useState<string>("")
 
   const shortenerUrl = (code: string) =>
-    `${process.env.NEXT_PUBLIC_BASE_URL}/${code}`
+    `${process.env.NEXT_PUBLIC_BASE_URL ?? ""}/${code}`
 
   const fetchUrls = async () => {
     try {
